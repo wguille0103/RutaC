@@ -19,6 +19,9 @@ public interface IPreferenciasService {
     
     public List<TipoPreferencia> tipoPreferenciasfindAll();
     
+    public Preferencias save(Preferencias preferencias);
+    
+    public List<Preferencias> listarPreferenciasPorUsuario(Integer idUsuario);
    
     
 }

@@ -103,16 +103,16 @@ public class Usuario implements Serializable {
     @Size(min = 1, max = 50)
     @Column(name = "password")
     private String password;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUsuario")
-    private List<Preferencias> preferenciasList;
+   /* @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUsuario")
+    private List<Preferencias> preferenciasList;*/
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConductor")
     private List<Ruta> rutaList;
     @JoinColumn(name = "cod_municipio", referencedColumnName = "cod_municipio")
    // @ManyToOne(optional = false)
     @OneToOne
     private Municipio codMunicipio;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUsuario")
-    private List<Vehiculo> vehiculoList;
+  /*  @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUsuario")
+    private List<Vehiculo> vehiculoList;*/
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPasajero")
     private List<Reserva> reservaList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUsuario")
@@ -234,13 +234,13 @@ public class Usuario implements Serializable {
         this.password = password;
     }
 
-    public List<Preferencias> getPreferenciasList() {
+  /*  public List<Preferencias> getPreferenciasList() {
         return preferenciasList;
     }
 
     public void setPreferenciasList(List<Preferencias> preferenciasList) {
         this.preferenciasList = preferenciasList;
-    }
+    }*/
 
     public List<Ruta> getRutaList() {
         return rutaList;
@@ -258,13 +258,13 @@ public class Usuario implements Serializable {
         this.codMunicipio = codMunicipio;
     }
 
-    public List<Vehiculo> getVehiculoList() {
+   /* public List<Vehiculo> getVehiculoList() {
         return vehiculoList;
     }
 
     public void setVehiculoList(List<Vehiculo> vehiculoList) {
         this.vehiculoList = vehiculoList;
-    }
+    }*/
 
     public List<Reserva> getReservaList() {
         return reservaList;

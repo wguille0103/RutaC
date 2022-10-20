@@ -37,6 +37,14 @@ public class PreferenciasService implements IPreferenciasService{
         return (List<TipoPreferencia>) tipoPreferenciasRepository.findAll();
     }
     
+    @Override
+    public Preferencias save(Preferencias preferencias) {
+        return preferenciasRepository.save(preferencias);
+    }
     
+    @Override
+    public List<Preferencias> listarPreferenciasPorUsuario(Integer idUsuario) {
+        return preferenciasRepository.listarPreferenciasPorUsuario(idUsuario);     
+    }
     
 }

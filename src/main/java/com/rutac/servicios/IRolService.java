@@ -5,15 +5,18 @@
  */
 package com.rutac.servicios;
 
-import com.rutac.modelo.Vehiculo;
+import com.rutac.modelo.Rol;
+import com.rutac.modelo.RolUsuario;
 import java.util.List;
 
 /**
  *
  * @author Wilman Parra
  */
-public interface IVehiculoService {
+public interface IRolService {
     
-    public List<Vehiculo> listarVehiculosPorUsuario(Integer idUsuario);
-    public Vehiculo save(Vehiculo cliente);
+    public List<Rol> findAll();
+    
+    public RolUsuario save(RolUsuario rolUsuario);
+    
 }

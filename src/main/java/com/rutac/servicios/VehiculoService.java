@@ -27,6 +27,7 @@ public class VehiculoService implements IVehiculoService{
         return vehiculoRepository.listarVehiculosPorUsuario(idUsuario);
     }
     
+    @Override
     public Vehiculo save(Vehiculo cliente) {
         return vehiculoRepository.save(cliente);
     }

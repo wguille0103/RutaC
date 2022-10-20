@@ -48,8 +48,8 @@ public class TipoPreferencia implements Serializable {
     @Size(min = 1, max = 120)
     @Column(name = "descripcion")
     private String descripcion;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTipoPreferencia")
-    private List<Preferencias> preferenciasList;
+   /* @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTipoPreferencia")
+    private List<Preferencias> preferenciasList;*/
 
     public TipoPreferencia() {
     }
@@ -88,13 +88,13 @@ public class TipoPreferencia implements Serializable {
         this.descripcion = descripcion;
     }
 
-    public List<Preferencias> getPreferenciasList() {
+   /* public List<Preferencias> getPreferenciasList() {
         return preferenciasList;
     }
 
     public void setPreferenciasList(List<Preferencias> preferenciasList) {
         this.preferenciasList = preferenciasList;
-    }
+    }*/
 
     @Override
     public int hashCode() {
