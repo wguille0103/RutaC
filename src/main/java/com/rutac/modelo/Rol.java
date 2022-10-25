@@ -44,8 +44,8 @@ public class Rol implements Serializable {
     @Size(min = 1, max = 45)
     @Column(name = "nombre")
     private String nombre;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idRol")
-    private List<RolUsuario> rolUsuarioList;
+   /* @OneToMany(cascade = CascadeType.ALL, mappedBy = "idRol")
+    private List<RolUsuario> rolUsuarioList;*/
 
     public Rol() {
     }
@@ -75,13 +75,13 @@ public class Rol implements Serializable {
         this.nombre = nombre;
     }
 
-    public List<RolUsuario> getRolUsuarioList() {
+  /*  public List<RolUsuario> getRolUsuarioList() {
         return rolUsuarioList;
     }
 
     public void setRolUsuarioList(List<RolUsuario> rolUsuarioList) {
         this.rolUsuarioList = rolUsuarioList;
-    }
+    }*/
 
     @Override
     public int hashCode() {

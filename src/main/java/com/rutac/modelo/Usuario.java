@@ -115,8 +115,8 @@ public class Usuario implements Serializable {
     private List<Vehiculo> vehiculoList;*/
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPasajero")
     private List<Reserva> reservaList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUsuario")
-    private List<RolUsuario> rolUsuarioList;
+  /*  @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUsuario")
+    private List<RolUsuario> rolUsuarioList;*/
 
     public Usuario() {
     }
@@ -274,13 +274,13 @@ public class Usuario implements Serializable {
         this.reservaList = reservaList;
     }
 
-    public List<RolUsuario> getRolUsuarioList() {
+   /* public List<RolUsuario> getRolUsuarioList() {
         return rolUsuarioList;
     }
 
     public void setRolUsuarioList(List<RolUsuario> rolUsuarioList) {
         this.rolUsuarioList = rolUsuarioList;
-    }
+    }*/
 
     @Override
     public int hashCode() {
